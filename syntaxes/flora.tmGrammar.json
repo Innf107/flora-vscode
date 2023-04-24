@@ -1,0 +1,31 @@
+{
+    "name": "Flora",
+    "scopeName": "source.flora",
+    "patterns": [
+        {
+            "name": "keyword.control.flora",
+            "match": "\\b(let)\\b"
+        },
+        {
+            "name": "comment.line.flora",
+            "match": "--.*\n",
+            "comment": "Line comment"
+        },
+        {
+            "name": "string.quoted.double.flora",
+            "match": "\"[^\"]*\""
+        },
+        { "include": "#operator" }
+    ],
+    "repository": {
+        "operator": {
+            "name": "keyword.operator.flora",
+            "patterns": [
+                {
+                    "name": "keyword.operator.flora",
+                    "match": "\\\\|="
+                }
+            ]
+        }
+    }
+}
